@@ -1,0 +1,123 @@
+.course_info{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.course_info .course_img{
+    width: 48%;
+}
+
+.course_info .course_img .img img{
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.course_info .course_img h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.course_info .course_details{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.course_info .course_details h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.course_info .course_details p{
+    font-size: 18px;
+}
+
+.course_info .course_details .about_course{
+    line-height: 1.5;
+}
+
+.course_info .course_details .teacher_name span{
+    color: #6a22ad;
+    font-weight: bold;
+}
+
+.course_info .course_details .teacher_about{
+    color: #808080;
+    margin-top: 5px;
+}
+
+.course_info .course_details .rating{
+    display: flex;
+    gap: 15px;
+}
+
+.course_info .course_details .rating p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.course_info .course_details .rating p span{
+    color: #808080;
+    font-weight: 100;
+}
+
+.course_info .course_details .rating .stars svg{
+    fill: #D4AF37;
+}
+
+.course_info .course_details button{
+    outline: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    background: #6D28D9;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.course_info .course_details button:hover{
+    scale: 1.1;
+    transform: translateY(-5px);
+}
+
+.course_prev{
+    padding: 0 20px;
+}
+
+.course_prev .prev_cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.course_prev .prev_cards .prev_card{
+    width: 300px;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 4px solid #6a22ad;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.course_prev .prev_cards .prev_card span{
+    display: inline-block;
+    margin-top: 5px;
+    color: #808080;
+}
+
+.course_prev .prev_cards .prev_card svg{
+    color: #6a22ad;
+    font-size: 30px;
+}
