@@ -23,7 +23,7 @@ function CoursesSlider() {
         {
             [...Array(10)].map((_, i) => (
                 <SwiperSlide>
-                    <Link key={i} to='/'>
+                    <Link key={i} to='/course-info'>
                         <div className="course_card">
                             <div className="img">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQm9wNFRBoQXgVwVbMPAaGk95Q9lqXvZzvfw&s" alt="" />
