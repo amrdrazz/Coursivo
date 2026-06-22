@@ -30,7 +30,7 @@ function HeroSlider() {
             {
                 [...Array(10)].map((_, i) => (
                     <SwiperSlide>
-                        <Link key={i} to='/' className='hero_slider_card' >
+                        <Link key={i} to='/profile' className='hero_slider_card' >
                             <span className="icon"><FaCode /></span>
                             <p>Programming</p>
                             <span>320 course</span>
