@@ -168,3 +168,43 @@
     fill: #D4AF37;
 }
 
+
+
+
+@media screen and (max-width: 960px) {
+    .records{
+        width: calc(100% + 300px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hero .hero_content .hero_text{
+        width: calc(100% + 300px);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .hero .hero_img{
+        display: none;
+    }
+    .hero .hero_content{
+        width: 80%;
+        margin: auto;
+    }
+    .records{
+        width: 100%;
+    }
+    .hero .hero_content .hero_text{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hero .hero_content{
+        width: 100%;
+    }
+    .records .record{
+        font-size: 14px;
+        width: 100px;
+    }
+}

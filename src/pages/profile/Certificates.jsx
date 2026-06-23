@@ -9,7 +9,7 @@ function Certificates() {
     <div className="certificates">
         <h1>Recent Certificates</h1>
       {[...Array(3)].map((_, index) => (
-        <div className="certificate_card">
+        <div key={index} className="certificate_card">
             <div className="image">
                 <img src={certificate.thumbnail} alt="" />
             </div>

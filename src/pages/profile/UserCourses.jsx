@@ -1,13 +1,13 @@
 import { WiDayThunderstorm } from "react-icons/wi";
-import Course from "./Course";
+import ProfileCourse from "./ProfileCourse";
 
 
 function UserCourses() {
 
     const course = {
         name: 'React Complete Course',
-        img: '../../imgs/react-thumbnail.png',
-        thumbnail: '../../../src/imgs/react-thumbnail.png',
+        img: './src/imgs/react-thumbnail.png',
+        thumbnail: './src/imgs/react-thumbnail.png',
         totalLessons: 35,
         completedLessons: 15
     }
@@ -17,7 +17,7 @@ function UserCourses() {
       <h1>My courses</h1>
       <div className="courses">
         {[...Array(3)].map((_, index) => (
-            <Course key={index} course={course}/>
+            <ProfileCourse key={index} course={course}/>
         ))}
       </div>
     </div>

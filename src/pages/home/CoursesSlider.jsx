@@ -5,7 +5,7 @@ import { Autoplay, Navigation } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 
-import { FaStar } from "react-icons/fa";
+import Course from "../../components/Course";
 
 function CoursesSlider() {
   return (
@@ -13,38 +13,41 @@ function CoursesSlider() {
       <div className="container">
 
       <Swiper 
-    //   navigation={true} 
-      autoplay={true}
-      modules={[Navigation, Autoplay]} 
-      className="courses_swiper"
-      loop={true}
-      slidesPerView={4}
+        // navigation={true} 
+        autoplay={true}
+        modules={[Navigation, Autoplay]} 
+        className="courses_swiper"
+        loop={true}
+        slidesPerView={4}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          640:{
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          768:{
+            slidesPerView: 3,
+            spaceBetween: 25
+          },
+          1150:{
+            slidesPerView: 4,
+            spaceBetween: 35
+          },
+          1460:{
+            slidesPerView: 5,
+            spaceBetween: 50
+          }
+        }}
       >
         {
-            [...Array(10)].map((_, i) => (
-                <SwiperSlide>
-                    <Link key={i} to='/course-info'>
-                        <div className="course_card">
-                            <div className="img">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQm9wNFRBoQXgVwVbMPAaGk95Q9lqXvZzvfw&s" alt="" />
-                            </div>
-                            <div className="content">
-
-                                <p className="title">Complete React Course</p>
-                                <p className="teacher">Amr Mohamed</p>
-                                <div className="stars">
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                </div>
-                                <p className="price"></p>
-                            </div>
-                        </div>
-                    </Link>
-                </SwiperSlide>
-            ))
+          [...Array(10)].map((_, index) => (
+            <SwiperSlide>
+                <Course key={index} />
+            </SwiperSlide>
+          ))
         }
       </Swiper>
       </div>

@@ -22,7 +22,10 @@ img{
 
 body{
     padding-top: 100px;
+    padding-bottom: 130px;
     background-color: #F8FAFC;
+    min-height: 100vh;
+    position: relative;
 }
 
 header{
@@ -72,10 +75,15 @@ header.hide{
 }
 
 .navbar .nav_icons span svg{
-    font-size: 22px;
+    font-size: 24px;
     cursor: pointer;
     /* fill: #94A3B8; */
     color: black;
+}
+
+.navbar .nav_icons .profile_icon svg{
+    font-size: 45px;
+    color: #6a22ad;
 }
 
 .navbar .search_box{
@@ -117,7 +125,11 @@ header.hide{
 footer{
     background: #0f172a;
     color: white;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 footer .container{
     padding: 10px 50px;
@@ -143,5 +155,51 @@ footer .social .icons{
 }
 
 footer .social .icons svg{
-    font-size: 25px;
+    font-size: 30px;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    footer .container{
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    footer .container h1{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .navbar{
+        flex-wrap: wrap;
+    }
+    .navbar .search_box{
+        width: 80%;
+        order: 2;
+        margin: auto;
+        margin-top: 10px;
+    }
+    body{
+        padding-top: 130px;
+    }
+    footer .social .icons svg{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer .container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    body{
+        padding-bottom: 245px;
+    }
+    footer .social .icons{
+        max-width: 250px;
+    }
 }

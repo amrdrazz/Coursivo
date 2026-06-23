@@ -25,7 +25,7 @@ function ProfileSidebar() {
         <li>
            <p><span><IoSettingsOutline /></span> <span>Settings</span></p> 
         </li>
-        <li>
+        <li onClick={() => {setLoggedIn(false)}}>
            <p><span><IoLogOutOutline /></span> <span>Log out</span></p> 
         </li>
       </ul>

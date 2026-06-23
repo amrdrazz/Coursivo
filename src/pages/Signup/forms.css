@@ -1,0 +1,44 @@
+.auth_form .error{
+    color: red;
+}
+
+.auth_form{
+    width: 500px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 20px -10px;
+}
+
+.auth_form label{
+    cursor: pointer;
+    color: #555;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.auth_form input{
+    padding: 10px 20px;
+    border-radius: 10px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: #8080805b;
+    font-size: 18px;
+}
+
+.auth_form button{
+    width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    background: #6a22ad6b;
+    color: black;
+    cursor: pointer;
+}

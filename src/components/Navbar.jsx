@@ -1,10 +1,13 @@
 import { FiLogIn } from "react-icons/fi";
 import { FaUserPlus } from "react-icons/fa";
-import SearchBox from "./SearchBox";
+import { CgProfile } from "react-icons/cg";
+
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-function Navbar() {
+import SearchBox from "./SearchBox";
+
+function Navbar({ loggedIn }) {
   const [showNav, setShowNav] = useState(true)
 
   useEffect(() => {
@@ -44,12 +47,20 @@ function Navbar() {
           <SearchBox />
 
           <div className="nav_icons">
-            <Link to='/login'>
-              <span><FiLogIn/></span>
-            </Link>
-            <Link to='signIn'>
-              <span><FaUserPlus/></span>
-            </Link>
+            {loggedIn ? (
+                <Link to='/profile'>
+                  <span className="profile_icon"><CgProfile /></span>
+                </Link>
+            ) : (
+              <>
+                <Link to='/login'>
+                  <span><FiLogIn /></span>
+                </Link>
+                <Link to='/signup'>
+                  <span><FaUserPlus /></span>
+                </Link>
+              </>
+            )}
           </div>
 
         </nav>

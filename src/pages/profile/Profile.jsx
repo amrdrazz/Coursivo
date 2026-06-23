@@ -5,10 +5,10 @@ import ProfileStatus from "./ProfileStatus"
 import './profile.css'
 
 
-function Profile() {
+function Profile({ setLoggedIn }) {
   return (
     <div className="profile">
-      <ProfileSidebar />
+      <ProfileSidebar setLoggedIn={setLoggedIn} />
       <ProfileInfo />
       <ProfileStatus />
     </div>
