@@ -1,3 +1,16 @@
+.login_redirect{
+    width: 200px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6a22ad3b;
+    border: 1px solid gray;
+    border-radius: 35px;
+}
+
+
 .profile{
     display: flex;
     gap: 20px;

@@ -2,7 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import '../Signup/forms.css'
-function Login({ setLoggedIn }) {
+import { useContext } from "react";
+import { UserContext } from "../../context/UserContext";
+function Login() {
+
+    const {setLoggedIn} = useContext(UserContext);
 
     const navigate = useNavigate()
 
@@ -20,6 +24,7 @@ function Login({ setLoggedIn }) {
 
         const res = await fetch('https://coursivo-back-end.vercel.app/login', {
             method: 'POST',
+            credentials: 'include',
             body: JSON.stringify({
                 email,
                 password

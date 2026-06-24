@@ -1,7 +1,7 @@
 // import React from 'react'
 
 import { Route, Routes } from "react-router-dom"
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import Navbar from "./components/Navbar"
 import Home from './pages/home/Home';
@@ -10,27 +10,17 @@ import Footer from "./components/Footer";
 import Profile from "./pages/profile/Profile";
 import Signup from './pages/Signup/Signup';
 import Login from "./pages/login/Login";
+import { UserContext } from "./context/UserContext";
 
 function App() {
 
-  const [loggedIn, setLoggedIn] = useState(false)
+  const { user, loggedIn, setLoggedIn } = useContext(UserContext);
 
   useEffect(() => {
-    const getLoggedIn = async () => {
-      try{
-        const res = await fetch('https://coursivo-back-end.vercel.app/auth-me', { credentials: 'include' });
-        if (res.ok){
-          setLoggedIn(true);
-        }else{
-          setLoggedIn(false);
-        }
-      }catch(err){
-        console.log(err)
-        setLoggedIn(false);
-      }
-    };
-    getLoggedIn();
-  },[]);
+    if (user){
+      setLoggedIn(true);
+    }
+  },[user]);
 
   let language;
 
@@ -42,7 +32,7 @@ function App() {
   }
 
 
-  const [lang, setLang] = useState(language)
+  const [lang, setLang] = useState(language);
 
 
   return (
@@ -52,9 +42,9 @@ function App() {
         <Route path="*" element={<h1>404 Not founded</h1>} />
         <Route path="/" element={<Home lang={lang} />} />
         <Route path="/course-info" element={<CourseInfo />} />
-        <Route path="/profile" element={<Profile setLoggedIn={setLoggedIn} />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/signup" element={<Signup setLoggedIn={setLoggedIn} />} />
-        <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </>

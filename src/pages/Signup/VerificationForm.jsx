@@ -2,7 +2,9 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 
-function VerificationForm({ email, setLoggedIn }) {
+function VerificationForm({ email}) {
+
+  const {setLoggedIn} = useContext(UserContext);
 
   const navigate = useNavigate();
 
@@ -14,8 +16,6 @@ function VerificationForm({ email, setLoggedIn }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsDisabled(true)
-
-    console.log(email, code)
 
     try{
       const res = await fetch('https://coursivo-back-end.vercel.app/verify', {
