@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import '../Signup/forms.css'
-function Login() {
+function Login({ setLoggedIn }) {
 
     const navigate = useNavigate()
 
@@ -29,6 +29,7 @@ function Login() {
         const data = await res.json();
         if (data.user){
             navigate('/');
+            setLoggedIn(true);
         }
 
         if (data.errors){

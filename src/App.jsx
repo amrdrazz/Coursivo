@@ -17,10 +17,15 @@ function App() {
 
   useEffect(() => {
     const getLoggedIn = async () => {
-      const res = await fetch('https://coursivo-back-end.vercel.app/auth-me', { credentials: 'include' });
-      if (res.ok){
-        setLoggedIn(true);
-      }else{
+      try{
+        const res = await fetch('https://coursivo-back-end.vercel.app/auth-me', { credentials: 'include' });
+        if (res.ok){
+          setLoggedIn(true);
+        }else{
+          setLoggedIn(false);
+        }
+      }catch(err){
+        console.log(err)
         setLoggedIn(false);
       }
     };
@@ -48,8 +53,8 @@ function App() {
         <Route path="/" element={<Home lang={lang} />} />
         <Route path="/course-info" element={<CourseInfo />} />
         <Route path="/profile" element={<Profile setLoggedIn={setLoggedIn} />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup setLoggedIn={setLoggedIn} />} />
+        <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
       </Routes>
       <Footer />
     </>

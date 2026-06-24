@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 
-function VerificationForm({ email }) {
+function VerificationForm({ email, setLoggedIn }) {
 
   const navigate = useNavigate();
 
@@ -37,6 +37,7 @@ function VerificationForm({ email }) {
   
       if (data.user){
         navigate('/');
+        setLoggedIn(true);
       }
     }catch(err){
       console.log(err)

@@ -3,7 +3,7 @@ import SignupForm from './SignupForm'
 import VerificationForm from './VerificationForm'
 
 import './forms.css'
-function Signup() {
+function Signup({ setLoggedIn }) {
 
   const [email, setEmail] = useState('');
 
@@ -13,6 +13,7 @@ function Signup() {
       {showVerification ? 
       (<VerificationForm 
         email={email}
+        setLoggedIn={setLoggedIn}
       />) : 
       (<SignupForm 
         setShowVerification={setShowVerification}
