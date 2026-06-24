@@ -18,7 +18,7 @@ function Login() {
         e.preventDefault();
         setIsDisabled(true)
 
-        const res = await fetch('http://localhost:3000/login', {
+        const res = await fetch('https://coursivo-back-end.vercel.app/login', {
             method: 'POST',
             body: JSON.stringify({
                 email,

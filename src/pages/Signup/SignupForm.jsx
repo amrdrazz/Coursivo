@@ -17,7 +17,7 @@ function SignupForm({setShowVerification, email, setEmail}) {
     e.preventDefault();
     setIsDisabled(true)
 
-    const res = await fetch('http://localhost:3000/signup', {
+    const res = await fetch('https://coursivo-back-end.vercel.app/signup', {
       method: 'POST',
       body: JSON.stringify({
         name,

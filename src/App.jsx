@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const getLoggedIn = async () => {
-      const res = await fetch('http://localhost:3000/auth-me', { credentials: 'include' });
+      const res = await fetch('https://coursivo-back-end.vercel.app/auth-me', { credentials: 'include' });
       if (res.ok){
         setLoggedIn(true);
       }else{

@@ -18,7 +18,7 @@ function VerificationForm({ email }) {
     console.log(email, code)
 
     try{
-      const res = await fetch('http://localhost:3000/verify', {
+      const res = await fetch('https://coursivo-back-end.vercel.app/verify', {
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify({
