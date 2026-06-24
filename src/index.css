@@ -133,6 +133,7 @@ footer{
 }
 footer .container{
     padding: 10px 50px;
+    gap: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -171,6 +172,9 @@ footer .social .icons svg{
     footer .container h1{
         font-size: 24px;
     }
+    footer .social h1{
+        text-wrap-mode: nowrap;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -183,8 +187,11 @@ footer .social .icons svg{
         margin: auto;
         margin-top: 10px;
     }
+    .navbar .search_box input{
+        font-size: 16px;
+    }
     body{
-        padding-top: 130px;
+        padding-top: 150px;
     }
     footer .social .icons svg{
         font-size: 22px;
