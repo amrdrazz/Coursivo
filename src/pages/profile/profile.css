@@ -162,6 +162,7 @@
 
 .profile .profile_info .profile_courses .courses .course .course_img img{
     width: auto;
+    height: 150px;
 }
 
 .profile .profile_info .profile_courses .courses .course .progress_bar{
@@ -252,6 +253,7 @@
 
 .profile .profile_status .certificate_card .image img{
     width: auto;
+    height: 100px;
 }
 
 .profile .profile_status .certificate_card button{
