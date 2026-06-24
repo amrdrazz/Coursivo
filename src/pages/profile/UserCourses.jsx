@@ -7,7 +7,7 @@ function UserCourses() {
     const course = {
         name: 'React Complete Course',
         img: './src/imgs/react-thumbnail.png',
-        thumbnail: './src/imgs/react-thumbnail.png',
+        thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb6YHBXrjdP_vnMX15ncXntXwPlWWEEXikKn0m_aVN8A&s=10',
         totalLessons: 35,
         completedLessons: 15
     }
