@@ -71,7 +71,9 @@ function CourseInfo() {
       <div className="course_prev">
         <div className="prev_cards">
           <div className="lessons prev_card">
-            <LuTvMinimalPlay />
+            <div className="perv_card_icon">
+              <LuTvMinimalPlay />
+            </div>
             <div className="text">
               <p>{course.lessonsNum -1}+ Lessons</p>
               <span>Video Content</span>
@@ -79,7 +81,9 @@ function CourseInfo() {
           </div>
 
           <div className="total_time prev_card">
-            <MdAccessTimeFilled />
+            <div className="perv_card_icon">
+              <MdAccessTimeFilled />
+            </div>
             <div className="text">
               <p>{course.totalTime}</p>
               <span>Total Time</span>
@@ -87,7 +91,9 @@ function CourseInfo() {
           </div>
 
           <div className="level prev_card">
-            <SiLevelsdotfyi />
+            <div className="perv_card_icon">
+              <SiLevelsdotfyi />
+            </div>
             <div className="text">
               <p>{course.level.level}</p>
               <span>{course.level.tip}</span>
@@ -95,7 +101,9 @@ function CourseInfo() {
           </div>
 
           <div className="certificate prev_card">
-            <PiCertificateFill />
+            <div className="perv_card_icon">
+              <PiCertificateFill />
+            </div>
             <div className="text">
               <p>Certificate</p>
               <span>Of Completion</span>
