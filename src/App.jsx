@@ -11,6 +11,11 @@ import Profile from "./pages/profile/Profile";
 import Signup from './pages/Signup/Signup';
 import Login from "./pages/login/Login";
 import { UserContext } from "./context/UserContext";
+import Dashboard from "./pages/profile/ProfilePages/dashboard/Dashboard";
+import MyCourses from './pages/profile/ProfilePages/my-courses/MyCourses';
+import Certificates from "./pages/profile/ProfilePages/certificatesPage/Certificates";
+import Wishlist from "./pages/profile/ProfilePages/wishlist/Wishlist";
+import Settings from "./pages/profile/ProfilePages/settingsPage/Settings";
 
 function App() {
 
@@ -42,7 +47,13 @@ function App() {
         <Route path="*" element={<h1>404 Not founded</h1>} />
         <Route path="/" element={<Home lang={lang} />} />
         <Route path="/course-info" element={<CourseInfo />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile />}>
+          <Route index element={<Dashboard />} />
+          <Route path="/profile/my-courses" element={<MyCourses />} />
+          <Route path="/profile/certificates" element={<Certificates />} />
+          <Route path="/profile/wishlist" element={<Wishlist />} />
+          <Route path="/profile/settings" element={<Settings />} />
+        </Route>
         <Route path="/signup" element={<Signup setLoggedIn={setLoggedIn} />} />
         <Route path="/login" element={<Login />} />
       </Routes>

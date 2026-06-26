@@ -1,11 +1,11 @@
 import { useContext } from "react"
-import ProfileInfo from "./ProfileInfo"
+import ProfileInfo from "./ProfilePages/dashboard/ProfileInfo"
 import ProfileSidebar from "./ProfileSidebar"
-import ProfileStatus from "./ProfileStatus"
+import ProfileStatus from "./ProfilePages/dashboard/ProfileStatus"
 
 import './profile.css'
 import { UserContext } from "../../context/UserContext"
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 
 
 function Profile() {
@@ -18,8 +18,9 @@ function Profile() {
         loggedIn ? (
           <div className="profile">
             <ProfileSidebar />
-            <ProfileInfo />
-            <ProfileStatus />
+            <div className="content">
+              <Outlet />
+            </div>
           </div>
         ) : (
           <Link to='/login'><h1 className="login_redirect">log in frist</h1></Link>

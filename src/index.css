@@ -14,6 +14,10 @@ img{
     width: 100%;
 }
 
+.show{
+    transform: translateX(0%) !important;
+}
+
 .container{
     width: 90%;
     max-width: 1200px;
@@ -52,6 +56,16 @@ header.hide{
     align-items: center;
     padding: 0 30px;
     color: #94A3B8;
+}
+
+.sidebar_toggeler{
+    cursor: pointer;
+    display: none;
+}
+
+.sidebar_toggeler svg{
+    font-size: 38px;
+    fill: black;
 }
 
 .navbar .logo h1{
@@ -160,6 +174,12 @@ footer .social .icons svg{
 }
 
 
+
+@media screen and (max-width: 1024px) {
+    .sidebar_toggeler{
+        display: block;
+    }
+}
 
 @media screen and (max-width: 900px) {
     footer .container{
