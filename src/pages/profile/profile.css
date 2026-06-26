@@ -375,6 +375,12 @@
     }
 }
 
+@media screen and (max-width: 640px) {
+    .profile .sidebar{
+        padding-top: 150px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .profile .content .profile_info .profile_img{
         width: 60px;
