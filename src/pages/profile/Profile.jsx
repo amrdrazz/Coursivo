@@ -18,7 +18,7 @@ function Profile() {
         loggedIn ? (
           <div className="profile">
             <ProfileSidebar />
-            <div className="content">
+            <div className="profile_content">
               <Outlet />
             </div>
           </div>

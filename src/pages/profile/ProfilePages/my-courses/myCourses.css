@@ -1,0 +1,76 @@
+.my_courses{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.my_courses h1{
+    margin-bottom: 20px;
+}
+
+.enrolled_course{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.enrolled_course::after{
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid #CCC;
+    position: absolute;
+    bottom: -10px;
+}
+
+.enrolled_course .img{
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.enrolled_course .img img{
+    border-radius: 10px;
+}
+
+.enrolled_course .text .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.enrolled_course .text .about{
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 5px 0 10px 0;
+    color: grey;
+}
+
+.enrolled_course .text .about:hover{
+    text-decoration: underline;
+}
+
+.enrolled_course .text .instructor{
+    color: gray;
+}
+
+.enrolled_course .countinue_learning button{
+    width: 180px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #6a22ad;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.enrolled_course .countinue_learning button:hover{
+    scale: 1.05;
+    transform: translateY(-5px);
+}

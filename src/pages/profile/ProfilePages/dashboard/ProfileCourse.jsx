@@ -1,6 +1,6 @@
 // import React from 'react'
 
-function Course({ course }) {
+function ProfileCourse({ course }) {
 
     const progress = (course.completedLessons / course.totalLessons) * 100;
 
@@ -22,4 +22,4 @@ function Course({ course }) {
   )
 }
 
-export default Course
+export default ProfileCourse;
