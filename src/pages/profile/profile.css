@@ -390,6 +390,12 @@
 }
 
 @media screen and (max-width: 600px) {
+    .profile .sidebar{
+        height: calc(100vh - 210px);
+    }
+}
+
+@media screen and (max-width: 600px) {
     .profile .profile_content .profile_info .profile_img{
         width: 80px;
         height: 80px;
