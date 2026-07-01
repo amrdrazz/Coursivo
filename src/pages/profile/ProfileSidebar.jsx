@@ -41,11 +41,6 @@ function ProfileSidebar() {
                <p><span><FaRegHeart /></span> <span>Wishlist</span></p> 
            </Link>
         </li>
-        <li className={`${(curruntPath === '/profile/settings') && 'active'}`}>
-           <Link to='/profile/settings'>
-               <p><span><IoSettingsOutline /></span> <span>Settings</span></p> 
-           </Link>
-        </li>
         <li onClick={() => {setLoggedIn(false)}}>
            <p><span><IoLogOutOutline /></span> <span>Log out</span></p> 
         </li>
